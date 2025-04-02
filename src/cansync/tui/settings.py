@@ -3,13 +3,12 @@ import sys
 from collections.abc import Callable
 from typing import Any
 
-from pytermgui import Button, Container, InputField, Splitter, Window, WindowManager
-
 from cansync import utils
 from cansync.api import Canvas
 from cansync.const import TUI_STYLE
 from cansync.tui.shared import ErrorWindow
 from cansync.types import ConfigKeys
+from pytermgui import Button, Container, InputField, Splitter, Window, WindowManager
 
 logger = logging.getLogger(__name__)
 _SELECT_OPTIONS = utils.same_length(

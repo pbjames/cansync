@@ -2,7 +2,6 @@ from pathlib import Path
 
 import pytest
 import toml
-
 from cansync import utils
 
 
@@ -35,7 +34,9 @@ class TestUtils:
             ["config_3.toml", "invalid"],
         ],
     )
-    def test_config_properties(self, test_data_path: Path, config_fn: str, test_type: str):
+    def test_config_properties(
+        self, test_data_path: Path, config_fn: str, test_type: str
+    ):
         with open(test_data_path / config_fn) as fp:
             this_config = toml.load(fp)
 

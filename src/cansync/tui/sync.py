@@ -51,7 +51,9 @@ class SyncWindow(Window):
                     self.action(course, module, "Reading page...")
 
                     for file in page.get_files():
-                        self.action(course, module, "Downloading file...")
+                        self.action(
+                            course, module, f"Downloading file [{file.filename}]..."
+                        )
                         self.download(file, page, course, module)
 
         self.finish()
